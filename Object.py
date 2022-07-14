@@ -1,8 +1,7 @@
 import tkinter as tk
 
-class Object():
 
-   
+class Object():
 
     # class members
     def __init__(self, object_name, x_pos_start, y_pos_start):
@@ -10,10 +9,9 @@ class Object():
         
         # class members
         self.object_name = object_name
-        self.binded_audios = [] #maybe make a dictionary for audio_name and audio_object
-        pos = tuple()
+        self.binded_audios = [] # maybe make a dictionary for audio_name and audio_object
         self.pos = (x_pos_start, y_pos_start)
-        self.start_pos = tuple(x_pos_start, y_pos_start)
+        self.start_pos = (x_pos_start, y_pos_start)
     
     def bind_to(self, filename):
         self.binded_audios.append(filename)
