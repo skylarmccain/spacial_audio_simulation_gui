@@ -6,10 +6,11 @@ OBJ_DIAM = 10
 
 class Simulation():
 
-    def __init__(self, parent, _canvas):
+    def __init__(self, parent, _canvas, name):
         
         self.parent = parent
         self.canvas = _canvas
+        self.name = name
         self.size = (self.canvas.winfo_width() , self.canvas.winfo_height())
         print("Simulation created with size", self.size)
 
@@ -18,6 +19,7 @@ class Simulation():
         
         # Dictionary to store audio files in the simulation
         self.audios = {}
+
     
     def add_object(self, name, x, y):
         self.objects[name] = obj.Object(name, x, y)
